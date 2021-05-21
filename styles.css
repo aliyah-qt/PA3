@@ -1,0 +1,422 @@
+/* @media stuff */
+
+/* ids */
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+
+#menu {
+    /* background-color: red; */
+    text-align: center;
+    padding: 40px 20px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#about-us {
+    /* background-color: blue; */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 100px 100px;
+    /* text-transform: uppercase; */
+
+    /* padding: 7% 15%; */
+}
+
+#what-is-boba {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-indent: 30px;
+    display: block;
+    padding: 100px 100px;
+    /* padding-bottom: 100px; */
+}
+
+
+.cover{
+    top: 0;
+    position: relative;
+    padding-bottom: 100px;
+}
+.cover img{
+    max-width: 100%;
+    max-height: auto;
+    font-size: 0;
+
+
+}
+.cover img:hover{
+    opacity: 0.8;
+}
+
+
+.cover p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: black;
+    border: 2px solid snow;
+    padding: 14px 16px;
+    z-index: 998;
+    position: absolute;
+    bottom: 170px;
+    left: 30px;
+    color: snow;
+
+}
+
+@media only screen and (max-width: 525px){
+
+    #what-is-boba {
+        /* padding: 10% 25%;
+        margin: 10% 3%; */
+        /* width: 300px; */
+    }
+    #about-us {
+        /* padding: 10% 25%;
+        margin: 10% 3%; */
+        /* width: 300px; */
+    }
+    .cover  {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 399px){
+
+    #what-is-boba {
+        /* padding: 10% 25%;
+        margin: 10% 3%; */
+        /* width: 300px; */
+    }
+    #about-us {
+        /* padding: 10% 25%;
+        margin: 10% 3%; */
+        /* width: 300px; */
+    }
+    .cover  {
+        width: 100%;
+    }
+}
+
+
+/* classes */
+.img-boba {
+    height: 150px;
+    width: 180px;
+    padding: 10px 10px;
+
+}
+.navbar {
+    display: inline;
+    padding: 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar:hover{
+    text-decoration: underline;
+
+}
+.navbar-container {
+    margin-bottom: 2%;
+    margin: 30px 10px 30px;
+    text-align: center;
+}
+
+header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+    border-bottom: solid;
+
+
+}
+.boba-header {
+    text-align: center;
+    margin-top: 3%;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.team-header{
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.team-header p {
+    text-transform: none;
+    margin-bottom: 7%;
+    line-height: 1.8;
+}
+.team-header hr{
+    border-style: dotted;
+    border-spacing: 6px;
+    border-bottom: none;
+    border-width: 4%;
+
+}
+.team img {
+    border: 3px solid black;
+    padding: 5px;
+    margin: 15px;
+    width: 200px;
+    height: 300px;
+
+}
+.team p {
+    color: black;
+    text-align: left;
+    /* padding-bottom: 300px; */
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.team-text {
+    padding-bottom: 180px
+}
+.menu-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+
+@media only screen and (max-width: 725px)
+{
+    .menu-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    form{
+        padding-top: 100px;
+    }
+
+    .prod-item{
+        padding-bottom: 200px;
+    }
+
+
+}
+@media only screen and (max-width: 540px)
+{
+    .menu-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+
+
+}
+@media only screen and (max-width: 420px)
+{
+
+    .menu-container{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+}
+@media only screen and (max-width: 200px)
+{
+    .menu-container{
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+}
+/* .menu-item {
+  width: 20%;
+  height: 2em;
+  border: none;
+  text-align: center;
+} */
+
+.menu-item td{
+    width: 20%;
+    height: 2em;
+    border: none;
+    text-align: center;
+}
+.menu-item img{
+    width: 15vw;
+    height: 12vw;
+    transition: transform .2s;
+}
+.menu-item a{
+    color: black;
+    text-decoration: none;
+
+}
+.menu-item:hover{
+    /* background-color: orange; */
+    text-decoration: none;
+    transform: scale(1.1);
+
+}
+
+.prod-view{
+    float: left;
+    padding-left: 3vw;
+    padding-top: 3vw;
+
+
+
+}
+.prod-view img {
+    padding-top: 10px;
+    align-items: center;
+    display: block;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+
+}
+
+.prod-view p{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.prod-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+@media only screen and (max-width: 983px)
+{
+    .prod-container{
+        grid-template-columns: auto;
+    }
+    .prod-view {
+        /* padding: 3vw 25%; */
+    }
+    form {
+        width: 25%;
+        /* padding: 3vw 25%; */
+    }
+
+    .team-text p{
+
+        font-size: x-large;
+        padding: 3vw 15%;
+    }
+
+    .team-header {
+        font-size: x-large;
+        padding: 3vw 15%;
+    }
+}
+
+
+
+.prod-item {
+    max-width: 100%;
+    /* max-height: 100%; */
+    /* width: 500px; */
+    height: 900px;
+    padding: 10px 25px;
+    /* background-color: lightblue; */
+}
+
+.form-container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.form-item{
+    margin: 10px 25px;
+
+}
+
+
+/* Styling for form */
+.order_form{
+    position: absolute;
+    width: 75%;
+    text-align: left;
+    background-color: #a09fe6;
+}
+
+/* Styling for form contd. */
+legend{
+    text-align: center;
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+/* Styling for form contd. */
+input[type=submit]{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 75%;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+footer{
+    border-top: solid;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+
+}
+
+
+@media only screen and (max-width: 525px){
+    footer {
+        width: 500px;
+    }
+    header {
+        width: 500px;
+    }
+}
+
+footer p{
+    text-align: right;
+    text-transform: uppercase;
+    /*font-size: 0.8vw;*/
+    /* font-size: 1vw; */
+    padding-right: 20px;
+}
+
